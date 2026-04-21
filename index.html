@@ -5,61 +5,71 @@
     <title>Meu primeiro site</title>
     <style>
         body {
-   background-color: #0f0f0f;
-color: aqua; 
-font-family: Georgia, 'Times New Roman', Times, serif;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-}
-
-.card {
-    background: color 1f 1f 1f;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    width: 300px;
-      }
-h1 {
- color: #a020f0;   
-   }
-img {
-    width: 150px;
-    border-radius: 50%;
-    margin-top: 10px;
-    }
-button {
-    margin-top: 15px;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: red;
-    color: pink;
-    cursor: pointer;
+            background-color: #0f0f0f;
+            color: aqua;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            animation: aparecer 1s ease; /* Moved animation here */
         }
-button:hover {
-    background-color: #c77dff;
-             }
- </style>
 
+        .card {
+            background-color: #1f1f1f; /* Corrected color syntax */
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: #a020f0;
+        }
+
+        img {
+            width: 150px;
+            height: 150px; /* Added height for circular look */
+            object-fit: cover;
+            border-radius: 50%;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: red;
+            color: pink;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #c77dff;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-<div class="card">
-    <h1>Oi, eu sou o Àllan</h1>
+    <div class="card">
+        <h1>Oi, eu sou o Àllan</h1>
+        <img src="7a5c471b9fa333923cd2ff05daa43d6d.jpg" alt="Foto">
+        <p id="mensagem">gosto de músicas, séries e estou aprendendo programação</p>
+        <button onclick="mostrarmensagem()">È isso veyr é vivencias veyr</button>
+    </div>
 
-    <img src="7a5c471b9fa333923cd2ff05daa43d6d.jpg4">
-    <p id="mensagem">gosto de músicas, séries e estou aprendendo programação</p>
-
-    <button>
-        onclick="mostrarmensagem()">È isso veyr é vivencias veyr
-    </button>
-</div>
-<script>
-    function mostrarmensagem() {
-
-        document.getElementById("mensagem").innerText = "ata amo";
-    }
-</script>
+    <script>
+        function mostrarmensagem() {
+            document.getElementById("mensagem").innerText = "ata amo";
+        }
+    </script>
 </body>
 </html>
